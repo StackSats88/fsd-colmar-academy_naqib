@@ -277,4 +277,86 @@ footer {
 .footer-container nav ul {
   display: flex;
   gap: 16px;
+
+/* ==================== MOBILE - 100% IDENTICAL TO WIREFRAME ==================== */
+@media screen and (max-width: 850px) {
+
+  /* Header - only the 3 icons */
+  .desktop { display: none; }
+  .mobile { display: flex; justify-content: space-around; width: 100%; }
+  header .logo span { display: none; }
+  header .logo img { height: 40px; }
+
+  /* Banner - full width, stacked */
+  .banner-container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .banner-container > img { width: 100%; }
+  .banner-text {
+    padding: 32px 16px 40px 16px;
+  }
+  .banner h1 { font-size: 3.2rem; margin-bottom: 1.5rem; }
+  .banner h2 { font-size: 1.6rem; margin-bottom: 2rem; }
+
+  /* Information section - only the 3 cards, stacked, mobile images */
+  .information .info-container { flex-direction: column; }
+  .main { display: none; }
+  .side { width: 100%; border: none; }
+  .item { flex-direction: column; padding: 16px; }
+  }
+  .item img { width: 100%; margin-bottom: 16px; }
+  .text { padding: 0; text-align: left; }
+  .text h3 { font-size: 2rem; }
+  .text p { font-size: 1.4rem; }
+  .text a { font-size: 1.3rem; }
+  .highlight { background: white; } /* no gray highlight on mobile */
+
+  /* Start learning - only big titles in gray boxes */
+  .courses {
+    padding: 32px 16px 24px;
+    background: white;
+  }
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .course {
+    background: #d8d8d8;
+  }
+  .course img { display: none; }
+  .info {
+    padding: 16px 16px 24px 16px;
+  }
+  .info h3 {
+    font-size: 2.2rem;
+    margin: 0;
+  }
+  .label,
+  .info p:not(:first-of-type) {
+    display: none;
+  }
+
+  /* Thesis exhibit - only the video, nothing else */
+  .thesis-container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .thesis .main {
+    width: 100%;
+    padding: 0 16px;
+  }
+  .thesis .main h3,
+  .thesis .main p {
+    display: none;
+  }
+  .thesis .side {
+    display: none;
+  }
+
+  /* Footer - only the copyright text */
+  footer nav { display: none; }
+  .footer-container {
+    justify-content: center;
+  }
 }
