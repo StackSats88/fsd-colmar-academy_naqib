@@ -1,4 +1,4 @@
-/* ==================== RESET & BASE ==================== */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,6 @@ body {
 img {
   display: block;
   width: 100%;
-  height: auto;
 }
 
 a {
@@ -37,7 +36,7 @@ h1, h2, h3 {
 
 .mobile { display: none; }
 
-/* ==================== HEADER ==================== */
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -72,7 +71,7 @@ nav.desktop ul {
   gap: 16px;
 }
 
-/* ==================== BANNER ==================== */
+/* Banner */
 .banner {
   margin-top: 64px;
   background: #d8d8d8;
@@ -111,15 +110,10 @@ nav.desktop ul {
   text-align: center;
   padding: 12px 0;
   font-size: 1.4rem;
-  transition: background 0.3s;
 }
 
-.button:hover {
-  background: #333;
-}
-
-/* ==================== INFORMATION SECTION ==================== */
-.information .info-container {
+/* Information */
+.info-container {
   display: flex;
 }
 
@@ -131,10 +125,6 @@ nav.desktop ul {
 .main h2 {
   font-size: 2.8rem;
   margin: 32px 0 24px;
-}
-
-.main p {
-  margin-bottom: 24px;
 }
 
 .side {
@@ -149,8 +139,7 @@ nav.desktop ul {
   transition: background 0.3s;
 }
 
-.item:hover,
-.highlight {
+.item:hover, .highlight {
   background: #d8d8d8;
 }
 
@@ -160,15 +149,14 @@ nav.desktop ul {
 }
 
 .text {
-  width: 65%;
+  flex: 1;
 }
 
 .text h3 {
   font-size: 1.8rem;
-  margin-bottom: 8px;
 }
 
-/* ==================== COURSES SECTION ==================== */
+/* Courses */
 .courses {
   background: #eaebeb;
   padding: 32px 72px 64px;
@@ -191,7 +179,8 @@ nav.desktop ul {
 }
 
 .course img {
-  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
 .info {
@@ -201,19 +190,10 @@ nav.desktop ul {
 
 .info h3 {
   font-size: 2rem;
-  margin-bottom: 8px;
 }
 
-.label {
-  font-size: 1rem;
-  color: #777;
-  text-transform: uppercase;
-  margin: 8px 0;
-}
-
-/* ==================== THESIS SECTION ==================== */
+/* Thesis */
 .thesis {
-  background: white;
   padding: 32px 0 64px;
   text-align: center;
 }
@@ -247,23 +227,11 @@ nav.desktop ul {
   text-align: left;
 }
 
-.thesis .side .item {
-  display: flex;
-  align-items: center;
-  padding: 16px;
-  transition: background 0.3s;
+.thesis .side {
+  width: 40%;
 }
 
-.thesis .side .item:hover {
-  background: #d8d8d8;
-}
-
-.thesis .side img {
-  width: 35%;
-  margin-right: 16px;
-}
-
-/* ==================== FOOTER ==================== */
+/* Footer */
 footer {
   border-top: 1px solid #ddd;
   padding: 16px 24px;
@@ -277,86 +245,4 @@ footer {
 .footer-container nav ul {
   display: flex;
   gap: 16px;
-
-/* ==================== MOBILE - 100% IDENTICAL TO WIREFRAME ==================== */
-@media screen and (max-width: 850px) {
-
-  /* Header - only the 3 icons */
-  .desktop { display: none; }
-  .mobile { display: flex; justify-content: space-around; width: 100%; }
-  header .logo span { display: none; }
-  header .logo img { height: 40px; }
-
-  /* Banner - full width, stacked */
-  .banner-container {
-    flex-direction: column;
-    padding: 0;
-  }
-  .banner-container > img { width: 100%; }
-  .banner-text {
-    padding: 32px 16px 40px 16px;
-  }
-  .banner h1 { font-size: 3.2rem; margin-bottom: 1.5rem; }
-  .banner h2 { font-size: 1.6rem; margin-bottom: 2rem; }
-
-  /* Information section - only the 3 cards, stacked, mobile images */
-  .information .info-container { flex-direction: column; }
-  .main { display: none; }
-  .side { width: 100%; border: none; }
-  .item { flex-direction: column; padding: 16px; }
-  }
-  .item img { width: 100%; margin-bottom: 16px; }
-  .text { padding: 0; text-align: left; }
-  .text h3 { font-size: 2rem; }
-  .text p { font-size: 1.4rem; }
-  .text a { font-size: 1.3rem; }
-  .highlight { background: white; } /* no gray highlight on mobile */
-
-  /* Start learning - only big titles in gray boxes */
-  .courses {
-    padding: 32px 16px 24px;
-    background: white;
-  }
-  .courses-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .course {
-    background: #d8d8d8;
-  }
-  .course img { display: none; }
-  .info {
-    padding: 16px 16px 24px 16px;
-  }
-  .info h3 {
-    font-size: 2.2rem;
-    margin: 0;
-  }
-  .label,
-  .info p:not(:first-of-type) {
-    display: none;
-  }
-
-  /* Thesis exhibit - only the video, nothing else */
-  .thesis-container {
-    flex-direction: column;
-    padding: 0;
-  }
-  .thesis .main {
-    width: 100%;
-    padding: 0 16px;
-  }
-  .thesis .main h3,
-  .thesis .main p {
-    display: none;
-  }
-  .thesis .side {
-    display: none;
-  }
-
-  /* Footer - only the copyright text */
-  footer nav { display: none; }
-  .footer-container {
-    justify-content: center;
-  }
 }
